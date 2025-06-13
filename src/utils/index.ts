@@ -1,0 +1,1 @@
+export { validateSurvey, isAnswerComplete, getAllAnswersComplete } from './surveyValidation';

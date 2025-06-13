@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "mcs-surveys",
+    "libraryId": "82da776e-3d42-4c42-8e93-1230ff9ce70a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "mcs-surveys",
+    "solutionShortDescription": "mcs-surveys description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

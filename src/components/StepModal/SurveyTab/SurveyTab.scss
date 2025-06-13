@@ -1,0 +1,170 @@
+@import '../../../styles/variables.scss';
+
+.survey-tab {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.survey-tab__header {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid #dee2e6;
+  flex-shrink: 0;
+}
+
+.survey-tab__title {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.survey-tab__description {
+  margin: 0 0 var(--spacing-md) 0;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.survey-tab__progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.survey-tab__progress-text {
+  font-size: 0.875rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.survey-tab__progress-bar {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.survey-tab__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), #0056b3);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.survey-tab__form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.survey-tab__questions {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: var(--spacing-lg);
+}
+
+.survey-tab__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-top: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  flex-shrink: 0;
+}
+
+.survey-tab__submit-btn {
+  min-width: 200px;
+}
+
+.survey-tab__incomplete-message {
+  margin: 0;
+  color: var(--warning-color);
+  font-size: 0.875rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .survey-tab__header {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .survey-tab__actions {
+    padding: var(--spacing-md);
+  }
+
+  .survey-tab__submit-btn {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* Loading state for form submission */
+.survey-tab__submit-btn:disabled {
+  position: relative;
+  color: transparent;
+}
+
+.survey-tab__submit-btn:disabled::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Progress bar animation */
+.survey-tab__progress-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.survey-tab__progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}

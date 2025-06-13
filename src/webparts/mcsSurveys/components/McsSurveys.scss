@@ -1,0 +1,104 @@
+@import '../../../styles/globals.scss';
+
+.app {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.app__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Global styles for the application */
+.app * {
+  box-sizing: border-box;
+}
+
+.app h1,
+.app h2,
+.app h3,
+.app h4,
+.app h5,
+.app h6 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #212529;
+}
+
+.app p {
+  font-family: var(--font-family);
+  line-height: var(--line-height-base);
+  color: #6c757d;
+}
+
+/* Utility classes */
+.app .text-center {
+  text-align: center;
+}
+
+.app .text-left {
+  text-align: left;
+}
+
+.app .text-right {
+  text-align: right;
+}
+
+.app .mb-0 {
+  margin-bottom: 0;
+}
+.app .mb-1 {
+  margin-bottom: var(--spacing-xs);
+}
+.app .mb-2 {
+  margin-bottom: var(--spacing-sm);
+}
+.app .mb-3 {
+  margin-bottom: var(--spacing-md);
+}
+.app .mb-4 {
+  margin-bottom: var(--spacing-lg);
+}
+.app .mb-5 {
+  margin-bottom: var(--spacing-xl);
+}
+
+.app .mt-0 {
+  margin-top: 0;
+}
+.app .mt-1 {
+  margin-top: var(--spacing-xs);
+}
+.app .mt-2 {
+  margin-top: var(--spacing-sm);
+}
+.app .mt-3 {
+  margin-top: var(--spacing-md);
+}
+.app .mt-4 {
+  margin-top: var(--spacing-lg);
+}
+.app .mt-5 {
+  margin-top: var(--spacing-xl);
+}
+
+/* Responsive container */
+@media (max-width: 768px) {
+  .app__container {
+    padding: 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .app {
+    background-color: white;
+  }
+
+  .app__container {
+    min-height: auto;
+  }
+}

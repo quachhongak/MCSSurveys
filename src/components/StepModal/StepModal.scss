@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.step-modal {
+  /* Modal-specific overrides */
+}
+
+.step-modal__content {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-modal__description {
+  padding: 0 0 var(--spacing-lg) 0;
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid #dee2e6;
+  color: #6c757d;
+  line-height: 1.6;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.step-modal__tabs {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step-modal__content {
+    height: 80vh;
+  }
+
+  .step-modal__description {
+    padding: 0 0 var(--spacing-md) 0;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-modal__content {
+    height: 85vh;
+  }
+}
