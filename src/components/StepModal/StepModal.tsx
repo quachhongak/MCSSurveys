@@ -39,6 +39,8 @@ const StepModal = () => {
       title={state.currentStep.name}
       size="extra-large"
       className="step-modal"
+      closeOnBackdrop={false}
+      closeOnEscape={false}
     >
       <div className="step-modal__content">
         <div className="step-modal__description">

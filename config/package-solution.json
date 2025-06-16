@@ -3,7 +3,7 @@
   "solution": {
     "name": "mcs-surveys-client-side-solution",
     "id": "82da776e-3d42-4c42-8e93-1230ff9ce70a",
-    "version": "1.0.0.0",
+    "version": "1.0.0.1",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -30,7 +30,7 @@
         "title": "mcs-surveys Feature",
         "description": "The feature that activates elements of the mcs-surveys solution.",
         "id": "46005518-4b3d-4d50-bbd2-02aebfb02c4c",
-        "version": "1.0.0.0"
+        "version": "1.0.0.1"
       }
     ]
   },
