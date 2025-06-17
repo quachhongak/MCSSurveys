@@ -104,13 +104,32 @@
   }
 }
 
-/* Loading state for form submission */
-.survey-tab__submit-btn:disabled {
+// /* Loading state for form submission */
+// .survey-tab__submit-btn:disabled {
+//   position: relative;
+//   color: transparent;
+// }
+
+// .survey-tab__submit-btn:disabled::after {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 20px;
+//   height: 20px;
+//   border: 2px solid #ffffff;
+//   border-top: 2px solid transparent;
+//   border-radius: 50%;
+//   animation: spinn 1s linear infinite;
+// }
+
+.spinner {
   position: relative;
   color: transparent;
 }
 
-.survey-tab__submit-btn:disabled::after {
+.spinner::after {
   content: '';
   position: absolute;
   top: 50%;

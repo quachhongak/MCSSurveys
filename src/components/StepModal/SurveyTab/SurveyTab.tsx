@@ -122,7 +122,7 @@ const SurveyTab = ({ questions }: ISurveyTabProps) => {
             variant="primary"
             size="large"
             disabled={!isFormComplete || isSubmitting}
-            className="survey-tab__submit-btn"
+            className={"survey-tab__submit-btn" + (isSubmitting ? " spinner" : "")}
           >
             Submit Survey
           </Button>
