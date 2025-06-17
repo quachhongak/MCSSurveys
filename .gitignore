@@ -10,9 +10,7 @@ node_modules
 dist
 lib
 release
-solution
 temp
-*.sppkg
 .heft
 
 # Coverage directory used by tools like istanbul
@@ -32,3 +30,4 @@ obj
 
 # Styles Generated Code
 *.scss.ts
+/sharepoint/solution/debug
